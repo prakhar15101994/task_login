@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}del-conf{% endblock title %}
+{% block body %}
+<div class="container">
+    <div class="row my-3">
+        <div class="col-sm-6 offset-sm-3">
+           
+            
+            <form action="" method="post" novalidate class="shadow p-5">
+                <h6>Are you Sure Want to Delete ?</h6>
+                {% csrf_token %}
+                <input type="submit" class="btn btn-danger mt-5" value="Yes">
+
+                 <a class="text-danger btn btn-warning mt-5" href="{% url 'profile' %}">cancel</a>
+                
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock body %}
